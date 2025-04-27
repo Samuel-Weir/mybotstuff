@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shoot-Em-Up Tournament</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Shoot-Em-Up Tournament</h1>
+    <p>🎯 Code your champion. Win the war.</p>
+  </header>
+
+  <div id="battlefield">
+    <div id="bot1Stats" class="bot-stats">
+      <label for="bot1Select">Select Bot 1:</label>
+      <select id="bot1Select">
+        <option value="./bots/bot1.js">bot1.js</option>
+        <option value="./bots/bot2.js">bot2.js</option>
+        <option value="./bots/blockey.js">blockey</option>
+        <option value="./bots/lhs.js">leeharveyoswald</option>
+      </select>
+    </div>
+
+    <div id="controls">
+      <label for="roundCountInput">Number of Rounds:</label>
+      <input id="roundCountInput" type="number" min="1" value="5" />
+      <button id="startGameBtn">Start Game</button>
+      <button id="nextRoundBtn" disabled>▶️ Next Round</button>
+      <button id="exportBtn" style="display:none;">📦 Export Match History</button>
+      <div id="actionFx"></div>
+      <div id="log" class="log-box"></div>
+    </div>
+
+    <div id="bot2Stats" class="bot-stats">
+      <label for="bot2Select">Select Bot 2:</label>
+      <select id="bot2Select">
+        <option value="./bots/bot1.js">bot1.js</option>
+        <option value="./bots/bot2.js">bot2.js</option>
+      </select>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
